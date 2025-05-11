@@ -1,18 +1,118 @@
-.one{
-   
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size:100;
-    text-align: center;
-    background-color: black;
-    color: greenyellow;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f0f0f;
+  color: whitesmoke;
+  line-height: 1.6;
 }
-.o1,.o2,.o3,.o4,.o5{
-background-color: black;
-color:aquamarine;
-text-align: center;
+.one {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 4rem; /* Was: 100 (invalid unit) */
+  text-align: center;
+  background-color: black;
+  color: greenyellow;
+  padding: 30px 0;
+  margin: 0;
+  border-bottom: 5px solid greenyellow;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 0 20px limegreen;
 }
 
-img{
-    width: 50px;
-    height:50px;
+
+header {
+  background: linear-gradient(90deg, #00ffcc, #39ff14);
+  padding: 20px;
+  text-align: center;
+}
+
+.main-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.2rem;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  animation: glow 2s infinite alternate;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.block {
+  background-color: #1c1c1c;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ffc8a2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.block:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px #00ffc8;
+}
+
+.block h2 {
+  font-size: 2rem;
+  color: #00e5ff;
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #00ffc8;
+  padding-bottom: 5px;
+}
+
+.block p, .block ul {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.block ul {
+  list-style-type: square;
+  padding-left: 20px;
+  text-align: left;
+  display: inline-block;
+  color: #e0f7fa;
+}
+
+.block img {
+  margin-top: 15px;
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #00ffc8;
+}
+
+/* Animation effects */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  }
+  to {
+    text-shadow: 0 0 20px #39ff14, 0 0 30px #39ff14;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+
+.fade-in.delay-1 { animation-delay: 0.3s; }
+.fade-in.delay-2 { animation-delay: 0.6s; }
+.fade-in.delay-3 { animation-delay: 0.9s; }
+.fade-in.delay-4 { animation-delay: 1.2s; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
